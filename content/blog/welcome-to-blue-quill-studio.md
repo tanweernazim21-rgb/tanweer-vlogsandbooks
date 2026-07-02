@@ -1,10 +1,10 @@
 ---
 layout: post.njk
 permalink: /blog/welcome-to-blue-quill-studio/
-title: "Welcome to Blue Quill Studio"
-date: "2026-07-02"
-description: "My first blog on Blue Quill Studio."
+title: Welcome to Blue Quill Studio
+date: 2026-07-02T20:01:00.000+05:30
 cover: ""
+description: My first blog on Blue Quill Studio.
 tags:
   - Writing
 ---
