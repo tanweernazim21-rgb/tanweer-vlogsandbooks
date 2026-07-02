@@ -3,6 +3,76 @@ layout: layout.njk
 title: Blue Quill Studio | Books, Stories & Leadership
 description: Books, leadership, stories and technology by Blue Quill Studio.
 ---
-<header class="hero"><div class="hero-inner"><span class="kicker">Official Author Website</span><h1>Blue Quill Studio</h1><p>Books • Leadership • Stories • Technology. Founded by Syed Tanweer Islam.</p><a class="btn" href="/books/">Explore Books</a><a class="btn outline" href="/blog/">Read Blog</a></div></header>
-<section><h2 class="section-title">Featured Books</h2><div class="grid2"><div class="card"><h3>When We Loved in Silence</h3><p>A heartfelt story of love, silence, sacrifice, family, memory and destiny.</p><a class="btn" href="https://www.amazon.com/dp/B0H6K3R9VT" target="_blank">Buy on Amazon</a></div><div class="card"><h3>Years of Lessons from the IT Battlefield</h3><p>Practical lessons for IT professionals and aspiring leaders.</p><a class="btn" href="https://www.amazon.com/dp/B0H61QLYFK" target="_blank">Buy on Amazon</a></div></div></section>
-<section><h2 class="section-title">Latest Blog Posts</h2><div class="grid3">{% for post in collections.blog | reverse %}<a class="card post-card" href="{{ post.url }}"><p class="post-meta">{{ post.data.date }}</p><h3 class="post-title">{{ post.data.title }}</h3><p class="post-summary">{{ post.data.description }}</p></a>{% endfor %}</div></section>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="kicker">Official Author Website</span>
+
+    <h1>Blue Quill Studio</h1>
+
+    <p>
+      Books • Leadership • Stories • Technology.
+      Founded by Syed Tanweer Islam.
+    </p>
+
+    <a class="btn" href="/books/">Explore Books</a>
+    <a class="btn btn-outline" href="/blog/">Read Blog</a>
+  </div>
+</header>
+
+<section>
+  <h2 class="section-title">Featured Books</h2>
+
+  <div class="grid2">
+
+    <div class="card">
+      <img src="/assets/when-we-loved-cover.jpg"
+           style="width:100%;border-radius:18px;margin-bottom:20px;">
+
+      <h3>When We Loved in Silence</h3>
+
+      <p>
+        A heartfelt story of love, silence, sacrifice,
+        family, memory and destiny.
+      </p>
+
+      <a class="btn"
+         href="https://www.amazon.com/dp/B0H6K3R9VT"
+         target="_blank">
+         Buy on Amazon
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="/assets/it-battlefield-cover.jpg"
+           style="width:100%;border-radius:18px;margin-bottom:20px;">
+
+      <h3>Years of Lessons from the IT Battlefield</h3>
+
+      <p>
+        Practical lessons for IT professionals and
+        aspiring leaders.
+      </p>
+
+      <a class="btn"
+         href="https://www.amazon.com/dp/B0H61QLYFK"
+         target="_blank">
+         Buy on Amazon
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Latest Blog Posts</h2>
+
+  <div class="grid3">
+    {% for post in collections.blog | reverse %}
+      <a class="card post-card" href="{{ post.url }}">
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.description }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</section>
