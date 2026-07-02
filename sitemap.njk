@@ -1,0 +1,13 @@
+---
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://bluequillstudio.com/</loc></url>
+<url><loc>https://bluequillstudio.com/books/</loc></url>
+<url><loc>https://bluequillstudio.com/about/</loc></url>
+<url><loc>https://bluequillstudio.com/blog/</loc></url>
+<url><loc>https://bluequillstudio.com/gallery/</loc></url>
+<url><loc>https://bluequillstudio.com/contact/</loc></url>
+{% for post in collections.blog %}<url><loc>https://bluequillstudio.com{{ post.url }}</loc></url>{% endfor %}
+</urlset>

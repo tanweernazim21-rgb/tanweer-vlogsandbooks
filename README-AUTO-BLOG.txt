@@ -1,0 +1,1 @@
+Upload these files to GitHub. Netlify will build with Eleventy. Then /admin publish will appear on /blog/ automatically.

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{{ title | default("Blue Quill Studio") }}</title>
+<meta name="description" content="{{ description | default("Official website of Blue Quill Studio.") }}">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="nav"><div class="nav-inner"><a class="brand" href="/"><span class="logo">BQ</span>Blue Quill Studio</a><div class="links"><a href="/">Home</a><a href="/books/">Books</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/gallery/">Gallery</a><a href="/contact/">Contact</a></div></div></div>
+{{ content | safe }}
+<div class="footer">© 2026 Blue Quill Studio. Founded by Syed Tanweer Islam.</div>
+</body></html>
