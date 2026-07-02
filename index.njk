@@ -68,11 +68,14 @@ description: Books, leadership, stories and technology by Blue Quill Studio.
   <h2 class="section-title">Latest Blog Posts</h2>
 
   <div class="grid3">
-    {% for post in collections.blog | reverse %}
-      <a class="card post-card" href="{{ post.url }}">
-        <h3>{{ post.data.title }}</h3>
-        <p>{{ post.data.description }}</p>
-      </a>
+    {% for post in collections.all | reverse %}
+      {% if post.url and post.url.startsWith("/blog/") and post.data.title %}
+        <a class="card post-card" href="{{ post.url }}">
+          <h3>{{ post.data.title }}</h3>
+          <p>{{ post.data.description }}</p>
+          <span class="btn">Read More</span>
+        </a>
+      {% endif %}
     {% endfor %}
   </div>
 </section>
