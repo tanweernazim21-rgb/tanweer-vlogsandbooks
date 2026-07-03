@@ -1,0 +1,73 @@
+media:
+  - name: blog_images
+    label: Blog Images
+    input: assets/blog
+    output: /assets/blog
+    categories: [image]
+    rename: safe
+
+content:
+  - name: blog
+    label: Blog Posts
+    type: collection
+    path: content/blog
+    format: yaml-frontmatter
+
+    filename:
+      template: "{year}-{month}-{day}-{title}.md"
+      field: false
+
+    view:
+      primary: title
+      fields: [title, date, description]
+      sort: date
+      order: desc
+
+    fields:
+      - name: layout
+        type: string
+        default: post.njk
+        hidden: true
+
+      - name: permalink
+        type: string
+        default: "/blog/{{ page.fileSlug }}/"
+        hidden: true
+
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: date
+        label: Publish Date
+        type: date
+        required: true
+        options:
+          time: true
+
+      - name: description
+        label: Summary
+        type: text
+        required: true
+
+      - name: cover
+        label: Featured Image
+        type: image
+        required: false
+        options:
+          media: blog_images
+
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+        required: false
+
+      - name: body
+        label: Article
+        type: rich-text
+        required: true
+        options:
+          media: blog_images
+          format: markdown
