@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-permalink: /blog/{{slug}}/
+permalink: "/blog/{{ page.fileSlug }}/"
 title: The Happiness Hidden in Small, Small Moments
 date: 2026-07-02T20:46:00.000+05:30
 description: The Happiness Hidden in Small, Small Moments
